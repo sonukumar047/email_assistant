@@ -1,0 +1,14 @@
+{
+  "subject": "Re: Need help updating billing information",
+  "body": "Dear Business.owner, \nI appreciate you reaching out to us about updating your company's billing information due to the change in your payment card. I'd be happy to assist you with this request. To proceed, I will send you a secure link to update your billing details, which will be emailed to the address associated with your account (as per your email). Please expect this link shortly, and if you have any questions or concerns, feel free to reply to this email. \n\nBest regards, \n[Your Name]",
+  "to": "business.owner@example.com",
+  "from": "support@company.com",
+  "intent": "request",
+  "sentiment": "positive",
+  "escalate": false,
+  "escalation_reason": null,
+  "confidence": 0.95,
+  "tone_style": "professional",
+  "processed_at": "2025-11-12T00:01:14.592561",
+  "processing_time": 1.55
+}

@@ -1,0 +1,7 @@
+{
+  "from": "curious.user@example.com",
+  "to": "support@company.com",
+  "subject": "Questions about premium plan features",
+  "body": "Hello, I'm currently on the basic plan and considering upgrading to premium. Could you please explain what additional features come with the premium subscription? Specifically, I'd like to know about storage limits, API access, and whether there's priority support included. Also, is there a discount for annual billing? Thank you!",
+  "history": []
+}

@@ -1,0 +1,14 @@
+{
+  "subject": "Re: Questions about premium plan features",
+  "body": "Dear Curious.user,\n\nThank you for reaching out to us about your interest in upgrading to our premium plan. The premium plan offers significantly increased storage limits, with a total of 10TB of storage space, as well as full API access for seamless integration with your applications. Additionally, premium plan subscribers receive priority support, ensuring that any issues are addressed promptly. Regarding billing, we do offer a discount for annual payments, which can provide up to 20% savings compared to monthly payments. If you have any further questions or would like to discuss the details of the premium plan, please don't hesitate to ask.\n\nBest regards,\nCustomer Support Team",
+  "to": "curious.user@example.com",
+  "from": "support@company.com",
+  "intent": "inquiry",
+  "sentiment": "neutral.",
+  "escalate": false,
+  "escalation_reason": null,
+  "confidence": 0.95,
+  "tone_style": "professional",
+  "processed_at": "2025-11-12T00:01:13.009458",
+  "processing_time": 1.65
+}

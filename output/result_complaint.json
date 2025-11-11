@@ -1,0 +1,14 @@
+{
+  "subject": "Urgent: Refund Request for Defective Product",
+  "body": "Dear Sonuhits18,\n\nI apologize sincerely for the extremely poor experience you've had with our product, and I understand that the past 3 days have been frustrating for you as you've tried to get help. I want to assure you that I'm committed to resolving this issue as quickly as possible. I've reviewed our conversation history and see that this is your fourth attempt to reach out to us, which is unacceptable, and for that, I'm truly sorry. I'm going to expedite your refund request and ensure that it's processed immediately.\n\nSincerely,\nCustomer Support Agent",
+  "to": "sonuhits18@gmail.com",
+  "from": "sonuhits047@gmail.com",
+  "intent": "complaint",
+  "sentiment": "negative",
+  "escalate": true,
+  "escalation_reason": "Repeat customer (4 previous interactions)",
+  "confidence": 0.95,
+  "tone_style": "professional",
+  "processed_at": "2025-11-12T00:01:09.688199",
+  "processing_time": 2.44
+}

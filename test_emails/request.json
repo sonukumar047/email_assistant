@@ -1,0 +1,13 @@
+{
+  "from": "business.owner@example.com",
+  "to": "support@company.com",
+  "subject": "Need help updating billing information",
+  "body": "Hi, I need to update my company's billing information as we've changed our payment card. Could you please guide me through the process or update it on your end? Our account email is business.owner@example.com and the account ID is BIZ-12345. I'd appreciate your help with this as soon as possible. Thanks!",
+  "history": [
+    {
+      "timestamp": "2025-11-08T10:15:00",
+      "from": "support@company.com",
+      "body": "Thank you for contacting us. To update billing information, please log into your account dashboard and navigate to Settings > Billing."
+    }
+  ]
+}

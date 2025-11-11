@@ -1,0 +1,14 @@
+{
+  "subject": "Re: Amazing experience with your product!",
+  "body": "Dear Happy.customer,\n\nWe are thrilled to hear about your exceptional experience with our product, and we appreciate the time you took to share your thoughtful feedback with us. Your kind words about our intuitive interface, useful features, and excellent customer support mean a great deal to our team, and we are grateful for your enthusiasm. We also appreciate your constructive suggestion to add a dark mode option, which we will definitely consider for future updates. Thank you again for your encouragement and for being a valued customer.\n\nBest regards,\nCustomer Support Team",
+  "to": "happy.customer@example.com",
+  "from": "support@company.com",
+  "intent": "feedback",
+  "sentiment": "positive",
+  "escalate": false,
+  "escalation_reason": null,
+  "confidence": 0.95,
+  "tone_style": "formal",
+  "processed_at": "2025-11-12T00:02:32.215032",
+  "processing_time": 2.27
+}

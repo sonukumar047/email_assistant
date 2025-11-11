@@ -1,0 +1,18 @@
+# Core dependencies
+langgraph
+langchain-groq
+langchain-core
+langchain
+
+# Environment and utilities
+python-dotenv
+
+# Testing
+pytest
+pytest-mock
+pytest-asyncio
+
+# Optional: Development tools
+black
+flake8
+mypy

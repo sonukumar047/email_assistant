@@ -1,0 +1,74 @@
+{
+  "processed_count": 4,
+  "timestamp": "2025-11-12T00:01:14.611625",
+  "results": [
+    {
+      "file": "complaint.json",
+      "result": {
+        "subject": "Urgent: Refund Request for Defective Product",
+        "body": "Dear Sonuhits18,\n\nI apologize sincerely for the extremely poor experience you've had with our product, and I understand that the past 3 days have been frustrating for you as you've tried to get help. I want to assure you that I'm committed to resolving this issue as quickly as possible. I've reviewed our conversation history and see that this is your fourth attempt to reach out to us, which is unacceptable, and for that, I'm truly sorry. I'm going to expedite your refund request and ensure that it's processed immediately.\n\nSincerely,\nCustomer Support Agent",
+        "to": "sonuhits18@gmail.com",
+        "from": "sonuhits047@gmail.com",
+        "intent": "complaint",
+        "sentiment": "negative",
+        "escalate": true,
+        "escalation_reason": "Repeat customer (4 previous interactions)",
+        "confidence": 0.95,
+        "tone_style": "professional",
+        "processed_at": "2025-11-12T00:01:09.688199",
+        "processing_time": 2.44
+      }
+    },
+    {
+      "file": "feedback.json",
+      "result": {
+        "subject": "Re: Amazing experience with your product!",
+        "body": "Dear Happy.customer,\n\nWe are thrilled to hear about your amazing experience with our product, and we appreciate the time you took to share your thoughts with us. Your kind words about our intuitive interface, useful features, and excellent customer support mean a lot to us, and we're glad to know that we've been able to meet your expectations. We also appreciate your suggestion to add a dark mode option, which is a great idea that we will definitely consider for future updates. Thank you again for your feedback and for being an engaged and valued customer.\n\nBest regards,\n[Your Name]",
+        "to": "happy.customer@example.com",
+        "from": "support@company.com",
+        "intent": "feedback",
+        "sentiment": "positive",
+        "escalate": false,
+        "escalation_reason": null,
+        "confidence": 0.95,
+        "tone_style": "professional",
+        "processed_at": "2025-11-12T00:01:11.331843",
+        "processing_time": 1.6
+      }
+    },
+    {
+      "file": "inquiry.json",
+      "result": {
+        "subject": "Re: Questions about premium plan features",
+        "body": "Dear Curious.user,\n\nThank you for reaching out to us about your interest in upgrading to our premium plan. The premium plan offers significantly increased storage limits, with a total of 10TB of storage space, as well as full API access for seamless integration with your applications. Additionally, premium plan subscribers receive priority support, ensuring that any issues are addressed promptly. Regarding billing, we do offer a discount for annual payments, which can provide up to 20% savings compared to monthly payments. If you have any further questions or would like to discuss the details of the premium plan, please don't hesitate to ask.\n\nBest regards,\nCustomer Support Team",
+        "to": "curious.user@example.com",
+        "from": "support@company.com",
+        "intent": "inquiry",
+        "sentiment": "neutral.",
+        "escalate": false,
+        "escalation_reason": null,
+        "confidence": 0.95,
+        "tone_style": "professional",
+        "processed_at": "2025-11-12T00:01:13.009458",
+        "processing_time": 1.65
+      }
+    },
+    {
+      "file": "request.json",
+      "result": {
+        "subject": "Re: Need help updating billing information",
+        "body": "Dear Business.owner, \nI appreciate you reaching out to us about updating your company's billing information due to the change in your payment card. I'd be happy to assist you with this request. To proceed, I will send you a secure link to update your billing details, which will be emailed to the address associated with your account (as per your email). Please expect this link shortly, and if you have any questions or concerns, feel free to reply to this email. \n\nBest regards, \n[Your Name]",
+        "to": "business.owner@example.com",
+        "from": "support@company.com",
+        "intent": "request",
+        "sentiment": "positive",
+        "escalate": false,
+        "escalation_reason": null,
+        "confidence": 0.95,
+        "tone_style": "professional",
+        "processed_at": "2025-11-12T00:01:14.592561",
+        "processing_time": 1.55
+      }
+    }
+  ]
+}
