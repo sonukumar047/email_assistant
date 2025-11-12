@@ -24,7 +24,7 @@ An intelligent, production-ready email automation system built with LangGraph an
 ## 🏗️ Architecture
 
 ### Workflow Graph
-
+```
 Entry Point
     ↓
 ┌─────────────────────────────────┐
@@ -53,7 +53,7 @@ Entry Point
 └─────────────────────────────────┘
     ↓
   Output
-
+```
 ### Tech Stack
 
 - **Framework**: LangGraph (State machine orchestration)
