@@ -1,115 +1,331 @@
+Here's a comprehensive **README.md** in Markdown format for your Email Assistant project:
+
+```markdown
 # 🤖 Smart Email Assistant with LangGraph + Groq
 
-> An intelligent email automation system that processes, classifies, and responds to customer emails with human-like understanding and context awareness.
+An intelligent, production-ready email automation system built with LangGraph and Groq API that automatically processes, classifies, and responds to customer emails with context-aware replies.
 
-## 📖 Project Overview
+![Python Version](https://img.shields.io/badge/python-3.9+-blue.svg)
+![LangGraph](https://img.shields.io/badge/LangGraph-0.2.0+-green.svg)
+![Groq](https://img.shields.io/badge/Groq-LLM-orange.svg)
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
-The **Smart Email Assistant** is a production-ready AI application built with LangGraph and Groq that transforms email support automation. By leveraging state-of-the-art language models and graph-based workflows, it automatically analyzes incoming customer emails, understands their intent and sentiment, maintains conversation context, and generates appropriate, tone-matched responses.
+## 📋 Table of Contents
 
-### What Makes This Special?
+- [Features](#features)
+- [Architecture](#architecture)
+- [Installation](#installation)
+- [Configuration](#configuration)
+- [Usage](#usage)
+- [Project Structure](#project-structure)
+- [Testing](#testing)
+- [Examples](#examples)
+- [Troubleshooting](#troubleshooting)
+- [Performance](#performance)
+- [Contributing](#contributing)
+- [License](#license)
 
-Unlike traditional rule-based email automation systems, this assistant:
+## ✨ Features
 
-- **Understands Context**: Remembers previous interactions and references them in replies
-- **Adapts Tone**: Matches response style to the situation (professional, friendly, formal, or casual)
-- **Makes Smart Decisions**: Automatically escalates complex issues to human agents
-- **Learns from History**: Builds customer profiles over time to provide personalized service
-- **Processes Fast**: Uses Groq's LPU infrastructure for ultra-fast inference (800+ tokens/sec)
+### Core Capabilities
+- **🎯 Intent Classification**: Automatically categorizes emails (complaint, request, feedback, inquiry)
+- **😊 Sentiment Analysis**: Detects emotional tone (positive, neutral, negative)
+- **📝 Smart Summarization**: Generates concise 2-3 line email summaries
+- **🧠 Persistent Memory**: JSON-based conversation history tracking
+- **💬 Context-Aware Replies**: Generates appropriate responses based on history
+- **⚡ Parallel Processing**: Runs classification and sentiment analysis simultaneously
+- **🎨 Configurable Tone**: Choose from 4 tone styles (professional, friendly, formal, casual)
+- **🚨 Smart Escalation**: Multi-criteria decision logic for issue escalation
 
-## 🎯 Purpose
+### Bonus Features
+- ⚙️ Feedback logging and tracking
+- 🔄 Batch email processing
+- 🎮 Interactive CLI mode
+- 🧪 Comprehensive test suite (unit + integration)
+- 📊 Processing metrics and analytics
+- 🔐 Environment-based configuration
 
-This project addresses a critical challenge in customer support: **scaling personalized communication**. 
+## 🏗️ Architecture
 
-### Problem Statement
+### Workflow Graph
 
-Modern businesses receive hundreds or thousands of customer emails daily. Support teams struggle with:
-- ⏰ Slow response times due to manual processing
-- 🔄 Repetitive questions consuming valuable agent time
-- 😞 Inconsistent tone and quality across responses
-- 📊 Lost context from previous conversations
-- 🚨 Delayed escalation of urgent issues
+```
+Entry Point
+    ↓
+┌─────────────────────────────────┐
+│ Classify & Analyze (Parallel)   │
+│  ├─ Intent Classification       │
+│  └─ Sentiment Analysis          │
+└─────────────────────────────────┘
+    ↓
+┌─────────────────────────────────┐
+│ Parallel Processing             │
+│  ├─ Summarize Email            │
+│  └─ Load Memory Context        │
+└─────────────────────────────────┘
+    ↓
+┌─────────────────────────────────┐
+│ Generate Reply (Sequential)     │
+│  - Tone adaptation             │
+│  - Context integration         │
+└─────────────────────────────────┘
+    ↓
+┌─────────────────────────────────┐
+│ Escalation Decision             │
+│  - Repeat customer check       │
+│  - Urgent keyword detection    │
+│  - Sentiment analysis          │
+└─────────────────────────────────┘
+    ↓
+  Output
+```
 
-### Solution
+### Tech Stack
 
-The Smart Email Assistant provides:
+- **Framework**: LangGraph (State machine orchestration)
+- **LLM Provider**: Groq (Ultra-fast inference with LPUs)
+- **Model**: llama-3.3-70b-versatile
+- **Language**: Python 3.9+
+- **Storage**: JSON-based persistent memory
+- **Testing**: pytest with mocking support
 
-1. **Automated Triage**: Instantly classifies emails by intent (complaint, request, feedback, inquiry)
-2. **Intelligent Routing**: Escalates complex cases while handling routine queries automatically
-3. **Context Preservation**: Maintains conversation history for coherent multi-turn interactions
-4. **Consistent Quality**: Ensures every response is professional, empathetic, and helpful
-5. **24/7 Availability**: Provides instant first-line responses at any time
+## 📦 Installation
 
-### Real-World Applications
+### Prerequisites
 
-- **E-commerce**: Handle order inquiries, return requests, and product feedback
-- **SaaS Companies**: Process account questions, feature requests, and technical issues
-- **Financial Services**: Respond to billing questions, update requests, and service inquiries
-- **Healthcare**: Manage appointment requests, information queries, and feedback collection
-- **Education**: Address student inquiries, enrollment questions, and course feedback
+- Python 3.9 or higher
+- Groq API key ([Get one here](https://console.groq.com))
+- pip or conda package manager
 
-## 💡 Key Use Cases
+### Step 1: Clone Repository
 
-### Use Case 1: High-Volume Support
-**Scenario**: Startup receiving 500+ daily support emails with 3-person team
+```
+git clone https://github.com/yourusername/email-assistant.git
+cd email-assistant
+```
 
-**Impact**:
-- Automates 60-70% of routine queries
-- Reduces average response time from 4 hours to <5 seconds
-- Frees agents to focus on complex issues requiring human judgment
+### Step 2: Create Virtual Environment
 
-### Use Case 2: After-Hours Support
-**Scenario**: Business needs 24/7 coverage without night shift costs
+```
+# Using venv
+python -m venv venv
 
-**Impact**:
-- Provides instant acknowledgment and basic resolution
-- Maintains professional communication outside business hours
-- Escalates urgent issues with detailed context for next-day handling
+# Activate on Windows
+venv\Scripts\activate
 
-### Use Case 3: Multi-Language Support (Future)
-**Scenario**: Global company serving customers in multiple languages
+# Activate on macOS/Linux
+source venv/bin/activate
+```
 
-**Impact**:
-- Single system handles all languages (with model swap)
-- Consistent quality across all communication channels
-- Reduced need for multilingual support staff
+### Step 3: Install Dependencies
 
-## 🏆 Project Context
+```
+pip install -r requirements.txt
+```
 
-- ✅ Advanced LangGraph workflow design
-- ✅ State management and memory persistence
-- ✅ LLM integration with Groq API (replacing OpenAI)
-- ✅ Parallel node execution for performance
-- ✅ Real-world problem-solving with AI agents
+### Step 4: Configure Environment
 
-### Assignment Requirements Met
+```
+# Create .env file
+echo "GROQ_API_KEY=your_groq_api_key_here" > .env
+```
 
-| Requirement | Implementation |
-|------------|----------------|
-| Email classification | ✅ 4 intent categories with sentiment analysis |
-| Summarization | ✅ Concise 2-3 line summaries |
-| Memory management | ✅ Persistent JSON-based conversation history |
-| Reply generation | ✅ Context-aware, tone-matched responses |
-| Escalation logic | ✅ Multi-criteria decision system |
-| **Bonus: Parallel processing** | ✅ Simultaneous classification & sentiment |
-| **Bonus: Configurable tone** | ✅ 4 tone styles (professional/friendly/formal/casual) |
-| **Bonus: Batch processing** | ✅ Multi-file processing with CLI |
+## ⚙️ Configuration
 
-## 🔬 Technical Innovation
+### Environment Variables (.env)
 
-### Graph-Based Orchestration
-Unlike linear pipelines, LangGraph enables sophisticated state management and conditional routing, making the system more maintainable and extensible.
+```
+# Required
+GROQ_API_KEY=gsk_xxxxxxxxxxxxxxxxxxxx
 
-### Groq Integration
-Swapped OpenAI for Groq to achieve **3-5x faster inference** using specialized LPU hardware, crucial for real-time email responses.
+# Optional
+LOG_LEVEL=INFO
+MAX_HISTORY_LENGTH=5
+```
 
-### Persistent Memory
-Implements conversation history tracking to provide context-aware responses, essential for handling repeat customers and complex multi-turn conversations.
+### Application Settings (config.py)
 
-### Run Application
-python main.py --file test_emails/complaint.json --tone professional
+```
+# Model Configuration
+DEFAULT_MODEL = "llama-3.3-70b-versatile"
+TEMPERATURE = 0.3
+MAX_TOKENS = 1000
 
-python main.py --file test_emails/feedback.json --tone formal
+# Tone Styles
+DEFAULT_TONE = "professional"  # professional, friendly, formal, casual
 
-python main.py --file test_emails/inquiry.json --tone friendly
+# Escalation Thresholds
+REPEAT_THRESHOLD = 2  # Auto-escalate after N interactions
+ESCALATION_KEYWORDS = ["urgent", "immediately", "refund", "terrible"]
 
-python main.py --file test_emails/request.json --tone casual
+# Memory Settings
+MEMORY_FILE = "data/memory.json"
+MAX_HISTORY_LENGTH = 5
+```
+
+## 🚀 Usage
+
+### Mode 1: Single Email Processing
+
+Process a single email from JSON file:
+
+```
+python main.py --file test_emails/complaint.json --tone friendly
+```
+
+**Input Example** (`test_emails/complaint.json`):
+```
+{
+  "from": "customer@example.com",
+  "to": "support@company.com",
+  "subject": "Payment issue",
+  "body": "My payment failed twice. Please help!",
+  "history": []
+}
+```
+
+**Output**:
+```
+======================================================================
+📧 EMAIL PROCESSING RESULT
+======================================================================
+
+📤 To: customer@example.com
+📨 From: support@company.com
+📋 Subject: Re: Payment issue
+
+💬 Intent: REQUEST
+😊 Sentiment: NEGATIVE
+⚠️  Escalate: YES
+   Reason: Urgent keywords detected: payment, failed
+
+📝 Reply Body:
+Hi Customer,
+
+I'm sorry to hear about the payment issues. I've escalated this to our 
+billing team who will investigate immediately. You should receive a 
+response within 24 hours.
+
+Best regards,
+Support Team
+
+⏱️  Processing Time: 2.73s
+======================================================================
+```
+
+### Mode 2: Interactive Mode
+
+Run interactive CLI for quick testing:
+
+```
+python main.py --interactive
+```
+
+You'll be prompted to enter:
+- From email
+- Subject
+- Body
+- Tone preference (1-4)
+
+### Mode 3: Batch Processing
+
+Process multiple emails from a directory:
+
+```
+python main.py --batch test_emails/
+```
+
+Output files saved to `output/` directory with summary report.
+
+### Mode 4: Memory Management
+
+```
+# Clear memory for specific user
+python main.py --clear-memory customer@example.com
+
+# Clear all memory
+python main.py --clear-memory all
+```
+
+### Available Tone Styles
+
+| Tone | Use Case | Example Response Style |
+|------|----------|----------------------|
+| **professional** | Default business communication | "Thank you for contacting us. We will assist you..." |
+| **friendly** | Casual, warm interactions | "Hi there! Thanks for reaching out! Let's get this sorted..." |
+| **formal** | Official, corporate communication | "Dear Valued Customer, We acknowledge receipt of your inquiry..." |
+| **casual** | Relaxed, conversational | "Hey! No worries, we'll fix this right up..." |
+
+## 📁 Project Structure
+
+```
+email_assistant/
+├── README.md                    # This file
+├── requirements.txt             # Python dependencies
+├── .env                        # Environment variables (create this)
+├── .gitignore                  # Git ignore rules
+│
+├── config.py                   # Application configuration
+├── main.py                     # Main entry point
+├── state.py                    # State management types
+├── nodes.py                    # LangGraph node implementations
+├── graph.py                    # Workflow graph builder
+├── memory_manager.py           # Persistent memory handler
+├── utils.py                    # Utility functions
+│
+├── data/
+│   └── memory.json            # Conversation history storage
+│
+├── test_emails/               # Sample email test cases
+│   ├── complaint.json         # Complaint intent
+│   ├── request.json           # Request intent
+│   ├── feedback.json          # Feedback intent
+│   ├── inquiry.json           # Inquiry intent
+│   └── request_urgent.json    # Urgent request
+│
+├── output/                    # Processing results
+│   ├── result.json           # Latest result
+│   └── batch_summary.json    # Batch processing summary
+│
+└── tests/                     # Test suite
+    ├── __init__.py
+    ├── test_nodes.py          # Node unit tests
+    ├── test_graph.py          # Graph integration tests
+    └── test_integration.py    # End-to-end tests
+
+
+
+
+### Development Setup
+
+1. Fork the repository
+2. Create feature branch: `git checkout -b feature/amazing-feature`
+3. Make changes and add tests
+4. Run test suite: `pytest tests/`
+5. Commit changes: `git commit -m 'Add amazing feature'`
+6. Push to branch: `git push origin feature/amazing-feature`
+7. Open Pull Request
+
+### Code Style
+
+- Follow PEP 8 guidelines
+- Use type hints
+- Add docstrings to all functions
+- Maximum line length: 100 characters
+- Run `black` formatter before committing
+
+
+## 👥 Authors
+
+Sonu Kumar
+
+## Acknowledgments
+
+- Built with [LangGraph](https://langchain-ai.github.io/langgraph/) by LangChain
+- Powered by [Groq](https://groq.com/) ultra-fast LPU inference
+- Inspired by the LangGraph Email Assistant assignment
+
+
+---
+
+**Made with ❤️ using LangGraph + Groq**
