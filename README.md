@@ -109,11 +109,9 @@ GROQ_API_KEY=gsk_xxxxxxxxxxxxxxxxxxxx
 # Optional
 LOG_LEVEL=INFO
 MAX_HISTORY_LENGTH=5
-```
 
 ### Application Settings (config.py)
 
-```
 # Model Configuration
 DEFAULT_MODEL = "llama-3.3-70b-versatile"
 TEMPERATURE = 0.3
@@ -153,9 +151,7 @@ python main.py --file test_emails/complaint.json --tone friendly
 
 **Output**:
 
-============================
  EMAIL PROCESSING RESULT
-============================
 
  To: customer@example.com
  From: support@company.com
@@ -177,7 +173,6 @@ Best regards,
 Support Team
 
 Processing Time: 2.73s
-==============================
 
 ### Mode 2: Interactive Mode
 
@@ -270,7 +265,7 @@ email_assistant/
 - Run `black` formatter before committing
 
 
-## 👥 Authors
+## Authors
 
 Sonu Kumar
 
