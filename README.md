@@ -6,14 +6,14 @@ An intelligent, production-ready email automation system built with LangGraph an
 ## Features
 
 ### Core Capabilities
-- ** Intent Classification**: Automatically categorizes emails (complaint, request, feedback, inquiry)
-- ** Sentiment Analysis**: Detects emotional tone (positive, neutral, negative)
-- ** Smart Summarization**: Generates concise 2-3 line email summaries
-- ** Persistent Memory**: JSON-based conversation history tracking
-- ** Context-Aware Replies**: Generates appropriate responses based on history
-- ** Parallel Processing**: Runs classification and sentiment analysis simultaneously
-- ** Configurable Tone**: Choose from 4 tone styles (professional, friendly, formal, casual)
-- ** Smart Escalation**: Multi-criteria decision logic for issue escalation
+-  Intent Classification**: Automatically categorizes emails (complaint, request, feedback, inquiry)
+-  Sentiment Analysis**: Detects emotional tone (positive, neutral, negative)
+-  Smart Summarization**: Generates concise 2-3 line email summaries
+-  Persistent Memory**: JSON-based conversation history tracking
+-  Context-Aware Replies**: Generates appropriate responses based on history
+-  Parallel Processing**: Runs classification and sentiment analysis simultaneously
+-  Configurable Tone**: Choose from 4 tone styles (professional, friendly, formal, casual)
+-  Smart Escalation**: Multi-criteria decision logic for issue escalation
 
 ### Bonus Features
 -  Feedback logging and tracking
