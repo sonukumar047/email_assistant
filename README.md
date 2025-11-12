@@ -1,55 +1,30 @@
-Here's a comprehensive **README.md** in Markdown format for your Email Assistant project:
-
-```markdown
 # 🤖 Smart Email Assistant with LangGraph + Groq
 
 An intelligent, production-ready email automation system built with LangGraph and Groq API that automatically processes, classifies, and responds to customer emails with context-aware replies.
 
-![Python Version](https://img.shields.io/badge/python-3.9+-blue.svg)
-![LangGraph](https://img.shields.io/badge/LangGraph-0.2.0+-green.svg)
-![Groq](https://img.shields.io/badge/Groq-LLM-orange.svg)
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
-
-## 📋 Table of Contents
-
-- [Features](#features)
-- [Architecture](#architecture)
-- [Installation](#installation)
-- [Configuration](#configuration)
-- [Usage](#usage)
-- [Project Structure](#project-structure)
-- [Testing](#testing)
-- [Examples](#examples)
-- [Troubleshooting](#troubleshooting)
-- [Performance](#performance)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## ✨ Features
 
 ### Core Capabilities
-- **🎯 Intent Classification**: Automatically categorizes emails (complaint, request, feedback, inquiry)
-- **😊 Sentiment Analysis**: Detects emotional tone (positive, neutral, negative)
-- **📝 Smart Summarization**: Generates concise 2-3 line email summaries
-- **🧠 Persistent Memory**: JSON-based conversation history tracking
-- **💬 Context-Aware Replies**: Generates appropriate responses based on history
-- **⚡ Parallel Processing**: Runs classification and sentiment analysis simultaneously
-- **🎨 Configurable Tone**: Choose from 4 tone styles (professional, friendly, formal, casual)
-- **🚨 Smart Escalation**: Multi-criteria decision logic for issue escalation
+- ** Intent Classification**: Automatically categorizes emails (complaint, request, feedback, inquiry)
+- ** Sentiment Analysis**: Detects emotional tone (positive, neutral, negative)
+- ** Smart Summarization**: Generates concise 2-3 line email summaries
+- ** Persistent Memory**: JSON-based conversation history tracking
+- ** Context-Aware Replies**: Generates appropriate responses based on history
+- ** Parallel Processing**: Runs classification and sentiment analysis simultaneously
+- ** Configurable Tone**: Choose from 4 tone styles (professional, friendly, formal, casual)
+- ** Smart Escalation**: Multi-criteria decision logic for issue escalation
 
 ### Bonus Features
 - ⚙️ Feedback logging and tracking
 - 🔄 Batch email processing
 - 🎮 Interactive CLI mode
-- 🧪 Comprehensive test suite (unit + integration)
-- 📊 Processing metrics and analytics
-- 🔐 Environment-based configuration
+
 
 ## 🏗️ Architecture
 
 ### Workflow Graph
 
-```
 Entry Point
     ↓
 ┌─────────────────────────────────┐
@@ -78,7 +53,6 @@ Entry Point
 └─────────────────────────────────┘
     ↓
   Output
-```
 
 ### Tech Stack
 
@@ -87,7 +61,6 @@ Entry Point
 - **Model**: llama-3.3-70b-versatile
 - **Language**: Python 3.9+
 - **Storage**: JSON-based persistent memory
-- **Testing**: pytest with mocking support
 
 ## 📦 Installation
 
@@ -99,14 +72,13 @@ Entry Point
 
 ### Step 1: Clone Repository
 
-```
+
 git clone https://github.com/yourusername/email-assistant.git
 cd email-assistant
-```
+
 
 ### Step 2: Create Virtual Environment
 
-```
 # Using venv
 python -m venv venv
 
@@ -115,26 +87,22 @@ venv\Scripts\activate
 
 # Activate on macOS/Linux
 source venv/bin/activate
-```
 
 ### Step 3: Install Dependencies
 
-```
+
 pip install -r requirements.txt
-```
 
 ### Step 4: Configure Environment
 
-```
 # Create .env file
 echo "GROQ_API_KEY=your_groq_api_key_here" > .env
-```
 
 ## ⚙️ Configuration
 
 ### Environment Variables (.env)
 
-```
+
 # Required
 GROQ_API_KEY=gsk_xxxxxxxxxxxxxxxxxxxx
 
@@ -161,7 +129,6 @@ ESCALATION_KEYWORDS = ["urgent", "immediately", "refund", "terrible"]
 # Memory Settings
 MEMORY_FILE = "data/memory.json"
 MAX_HISTORY_LENGTH = 5
-```
 
 ## 🚀 Usage
 
@@ -169,12 +136,12 @@ MAX_HISTORY_LENGTH = 5
 
 Process a single email from JSON file:
 
-```
+
 python main.py --file test_emails/complaint.json --tone friendly
-```
+
 
 **Input Example** (`test_emails/complaint.json`):
-```
+
 {
   "from": "customer@example.com",
   "to": "support@company.com",
@@ -182,10 +149,10 @@ python main.py --file test_emails/complaint.json --tone friendly
   "body": "My payment failed twice. Please help!",
   "history": []
 }
-```
+
 
 **Output**:
-```
+
 ======================================================================
 📧 EMAIL PROCESSING RESULT
 ======================================================================
@@ -211,15 +178,13 @@ Support Team
 
 ⏱️  Processing Time: 2.73s
 ======================================================================
-```
 
 ### Mode 2: Interactive Mode
 
 Run interactive CLI for quick testing:
 
-```
 python main.py --interactive
-```
+
 
 You'll be prompted to enter:
 - From email
@@ -231,21 +196,19 @@ You'll be prompted to enter:
 
 Process multiple emails from a directory:
 
-```
+
 python main.py --batch test_emails/
-```
 
 Output files saved to `output/` directory with summary report.
 
 ### Mode 4: Memory Management
 
-```
+
 # Clear memory for specific user
 python main.py --clear-memory customer@example.com
 
 # Clear all memory
 python main.py --clear-memory all
-```
 
 ### Available Tone Styles
 
@@ -258,7 +221,6 @@ python main.py --clear-memory all
 
 ## 📁 Project Structure
 
-```
 email_assistant/
 ├── README.md                    # This file
 ├── requirements.txt             # Python dependencies
@@ -284,14 +246,10 @@ email_assistant/
 │   └── request_urgent.json    # Urgent request
 │
 ├── output/                    # Processing results
-│   ├── result.json           # Latest result
-│   └── batch_summary.json    # Batch processing summary
-│
-└── tests/                     # Test suite
-    ├── __init__.py
-    ├── test_nodes.py          # Node unit tests
-    ├── test_graph.py          # Graph integration tests
-    └── test_integration.py    # End-to-end tests
+   ├── result.json           # Latest result
+   └── batch_summary.json    # Batch processing summary
+
+
 
 
 
@@ -300,11 +258,10 @@ email_assistant/
 
 1. Fork the repository
 2. Create feature branch: `git checkout -b feature/amazing-feature`
-3. Make changes and add tests
-4. Run test suite: `pytest tests/`
-5. Commit changes: `git commit -m 'Add amazing feature'`
-6. Push to branch: `git push origin feature/amazing-feature`
-7. Open Pull Request
+3. Make changes 
+4. Commit changes: `git commit -m 'Add amazing feature'`
+5. Push to branch: `git push origin feature/amazing-feature`
+6. Open Pull Request
 
 ### Code Style
 
