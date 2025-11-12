@@ -1,9 +1,9 @@
-# 🤖 Smart Email Assistant with LangGraph + Groq
+# Smart Email Assistant with LangGraph + Groq
 
 An intelligent, production-ready email automation system built with LangGraph and Groq API that automatically processes, classifies, and responds to customer emails with context-aware replies.
 
 
-## ✨ Features
+## Features
 
 ### Core Capabilities
 - ** Intent Classification**: Automatically categorizes emails (complaint, request, feedback, inquiry)
@@ -16,12 +16,12 @@ An intelligent, production-ready email automation system built with LangGraph an
 - ** Smart Escalation**: Multi-criteria decision logic for issue escalation
 
 ### Bonus Features
-- ⚙️ Feedback logging and tracking
-- 🔄 Batch email processing
-- 🎮 Interactive CLI mode
+-  Feedback logging and tracking
+-  Batch email processing
+-  Interactive CLI mode
 
 
-## 🏗️ Architecture
+## Architecture
 
 ### Workflow Graph
 ```
@@ -62,7 +62,7 @@ Entry Point
 - **Language**: Python 3.9+
 - **Storage**: JSON-based persistent memory
 
-## 📦 Installation
+## Installation
 
 ### Prerequisites
 
@@ -98,7 +98,7 @@ pip install -r requirements.txt
 # Create .env file
 echo "GROQ_API_KEY=your_groq_api_key_here" > .env
 
-## ⚙️ Configuration
+## Configuration
 
 ### Environment Variables (.env)
 
@@ -130,7 +130,7 @@ ESCALATION_KEYWORDS = ["urgent", "immediately", "refund", "terrible"]
 MEMORY_FILE = "data/memory.json"
 MAX_HISTORY_LENGTH = 5
 
-## 🚀 Usage
+## Usage
 
 ### Mode 1: Single Email Processing
 
@@ -153,20 +153,20 @@ python main.py --file test_emails/complaint.json --tone friendly
 
 **Output**:
 
-======================================================================
-📧 EMAIL PROCESSING RESULT
-======================================================================
+============================
+ EMAIL PROCESSING RESULT
+============================
 
-📤 To: customer@example.com
-📨 From: support@company.com
-📋 Subject: Re: Payment issue
+ To: customer@example.com
+ From: support@company.com
+ Subject: Re: Payment issue
 
-💬 Intent: REQUEST
-😊 Sentiment: NEGATIVE
-⚠️  Escalate: YES
+ Intent: REQUEST
+ Sentiment: NEGATIVE
+ Escalate: YES
    Reason: Urgent keywords detected: payment, failed
 
-📝 Reply Body:
+Reply Body:
 Hi Customer,
 
 I'm sorry to hear about the payment issues. I've escalated this to our 
@@ -176,8 +176,8 @@ response within 24 hours.
 Best regards,
 Support Team
 
-⏱️  Processing Time: 2.73s
-======================================================================
+Processing Time: 2.73s
+==============================
 
 ### Mode 2: Interactive Mode
 
@@ -221,6 +221,7 @@ python main.py --clear-memory all
 
 ## 📁 Project Structure
 
+```
 email_assistant/
 ├── README.md                    # This file
 ├── requirements.txt             # Python dependencies
@@ -248,10 +249,7 @@ email_assistant/
 ├── output/                    # Processing results
    ├── result.json           # Latest result
    └── batch_summary.json    # Batch processing summary
-
-
-
-
+```
 
 
 ### Development Setup
